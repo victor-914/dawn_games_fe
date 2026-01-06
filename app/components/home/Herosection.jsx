@@ -1,22 +1,17 @@
 'use client'
 import { Box, Typography, Button, Stack } from '@mui/material'
-import StarBorderIcon from '@mui/icons-material/StarBorder'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
-import PlayArrowIcon from '@mui/icons-material/PlayArrow'
+import { StarBorder, ArrowForward, PlayArrow } from '@mui/icons-material'
 
 export default function Herosection() {
-  const scrollToNext = () => {
-    window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
-  }
-
   return (
     <Box sx={{
       width: '100%',
-      height: 689,
-      backgroundImage: 'url(/hero-bg.png)',
+      height: { xs: 'auto', md: 689 },
+      minHeight: { xs: '90vh', md: 689 },
+      py: { md: 0 },
+      backgroundImage: 'url(https://ik.imagekit.io/4bvbtnlkl/hero-bg.png)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -26,51 +21,49 @@ export default function Herosection() {
       overflow: 'hidden'
     }}>
       <Box sx={{ width: '90%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        
         <Stack direction="row" alignItems="center" spacing={1} sx={{
           bgcolor: 'rgba(255, 107, 53, 0.1)',
           borderRadius: '50px',
-          px: 3, py: 1, mb: 3,
+          px: { xs: 2, md: 3 }, py: 1, mb: 3,
           border: '1px solid rgba(255, 107, 53, 0.1)'
         }}>
-          <StarBorderIcon sx={{ color: '#FF6B35', width: 20, height: 20 }} />
-          <Typography sx={{ fontFamily: 'Inter', fontSize: 16, color: '#FF6B35' }}>
+          <StarBorder sx={{ color: '#FF6B35', width: 20, height: 20 }} />
+          <Typography sx={{ fontFamily: 'Inter', fontSize: { xs: 13, md: 16 }, color: '#FF6B35', textAlign: 'left' }}>
             Trusted by forward-thinking institutions across Africa
           </Typography>
         </Stack>
 
         <Typography variant="h1" sx={{
-          fontFamily: 'Inter', fontWeight: 'bold', fontSize: { xs: 36, md: 48 }, color: '#FFFFFF', mb: 2
+          fontFamily: 'Inter', fontWeight: 'bold', fontSize: { xs: 32, sm: 40, md: 48 }, color: '#FFFFFF', mb: 2
         }}>
           One System, Every Goal
         </Typography>
 
         <Typography sx={{
-          fontFamily: 'Inter', fontSize: { xs: 18, md: 20 }, color: '#D1D5DC', maxWidth: 729, mb: 5
+          fontFamily: 'Inter', fontSize: { xs: 16, md: 20 }, color: '#D1D5DC', maxWidth: 729, mb: 5, px: { xs: 2, md: 0 }
         }}>
           The complete sports and entertainment management platform built specifically for African institutions. From athlete development to tournament hosting, we power excellence in sports.
         </Typography>
 
-        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} mb={8}>
-          <Button endIcon={<ArrowForwardIcon />} sx={{
+        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} mb={{ xs: 5, md: 8 }} width={{ xs: '100%', sm: 'auto' }}>
+          <Button endIcon={<ArrowForward />} sx={{
             background: 'linear-gradient(180deg, #FF6B35 0%, #FF8C5A 100%)',
-            width: 208, height: 56, borderRadius: '10px', color: '#fff', textTransform: 'none'
+            width: { xs: '100%', sm: 208 }, height: 56, borderRadius: '10px', color: '#fff', textTransform: 'none'
           }}>
             Request a Demo
           </Button>
-
-          <Button startIcon={<PlayArrowIcon />} sx={{
+          <Button startIcon={<PlayArrow />} sx={{
             bgcolor: 'rgba(255, 255, 255, 0.1)', border: '1px solid rgba(255, 255, 255, 0.2)',
-            width: 238, height: 57, borderRadius: '10px', color: '#fff', textTransform: 'none'
+            width: { xs: '100%', sm: 238 }, height: 57, borderRadius: '10px', color: '#fff', textTransform: 'none'
           }}>
             Watch Platform Tour
           </Button>
         </Stack>
       </Box>
 
-      <Box onClick={scrollToNext} sx={{
+      <Box onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })} sx={{
         width: 24, height: 40, border: '1px solid rgba(255, 107, 53, 0.5)',
-        borderRadius: '20px', display: 'flex', justifyContent: 'center',
+        borderRadius: '20px', display: { xs: 'none', md: 'flex' }, justifyContent: 'center',
         cursor: 'pointer', position: 'absolute', bottom: 40
       }}>
         <Box sx={{
