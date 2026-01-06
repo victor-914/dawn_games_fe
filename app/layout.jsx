@@ -5,9 +5,14 @@ import Navbar from './components/layout/navbar'
 export const metadata = {
   title: 'DawnGames',
   description: 'Next Gen Gaming',
+  icons: {
+    icon: "/logo.png", 
+    shortcut: "/logo.png",
+    apple: "/logo.png", 
+  },
+  manifest: "/manifest.json", 
 }
 
-// For Next.js 14+, viewport should be a separate export
 export const viewport = {
   width: 'device-width',
   initialScale: 1,

@@ -1,0 +1,21 @@
+{
+  "name": "Dawn Games",
+  "short_name": "Dawn Games",
+  "description": "The all-in-one platform for African sports clubs, e-sports organizations, and game developers.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050B14",
+  "theme_color": "#050B14",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
