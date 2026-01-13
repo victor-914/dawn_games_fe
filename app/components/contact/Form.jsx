@@ -35,7 +35,7 @@ export default function Form() {
             <Box sx={{ flex: 1 }}><Label>Email Address *</Label><Input placeholder="john@example.com" /></Box>
           </Box>
           <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4 }}>
-            <Box sx={{ flex: 1 }}><Label>Phone Number</Label><Input placeholder="+234 XXX XXX XXXX" /></Box>
+            <Box sx={{ flex: 1 }}><Label>Phone Number</Label><Input placeholder="+234 708 311 4936" /></Box>
             <Box sx={{ flex: 1 }}><Label>Organization</Label><Input placeholder="Your Academy/Club Name" /></Box>
           </Box>
           <Box><Label>I'm interested in *</Label><Input placeholder="" /></Box>

@@ -11,7 +11,7 @@ const cards = [
   {
     title: 'Sales Inquiries', description: 'Questions about pricing, features, or implementation?',
     icon: <ChatBubbleOutline sx={{ color: '#FFFFFF', width: 32, height: 32 }} />, iconBg: 'linear-gradient(180deg, #FF6B35 0%, #FF8C5A 100%)',
-    shadowColor: 'rgba(255, 107, 53, 0.5)', action: 'contacts', email: 'sales@dawngames.ng', phone: '+234 XXX XXX XXXX'
+    shadowColor: 'rgba(255, 107, 53, 0.5)', action: 'contacts', email: 'sales@dawngames.ng', phone: '+234 708 311 4936'
   },
   {
     title: 'Partnership Opportunities', description: 'Interested in collaborating or integration?',
@@ -39,6 +39,7 @@ export default function HeroSection() {
         </Container>
       </Box>
 
+      {/* Contact Cards Section
       <Box sx={{ width: '100%', bgcolor: '#050B14', pb: 15, pt: 5 }}>
         <Container maxWidth="lg">
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
@@ -91,6 +92,7 @@ export default function HeroSection() {
           </Box>
         </Container>
       </Box>
+       */}
     </Box>
   )
 }

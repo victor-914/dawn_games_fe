@@ -35,8 +35,8 @@ export default function Navbar() {
           })}
         </Stack>
 
-        <Button sx={{ display: { xs: 'none', md: 'flex' }, background: 'linear-gradient(180deg, #FF6B35 0%, #FF8C5A 100%)', width: { md: 130, lg: 151.65 }, height: 48, borderRadius: '10px', color: '#FFFFFF', fontSize: { md: 14, lg: 16 }, fontWeight: 400, flexShrink: 0, '&:hover': { opacity: 0.9 } }}>
-          Request Demo
+        <Button href='/contact' sx={{ display: { xs: 'none', md: 'flex' }, background: 'linear-gradient(180deg, #FF6B35 0%, #FF8C5A 100%)', width: { md: 130, lg: 151.65 }, height: 48, borderRadius: '10px', color: '#FFFFFF', fontSize: { md: 14, lg: 16 }, fontWeight: 400, flexShrink: 0, '&:hover': { opacity: 0.9 } }}>
+          Contact Sales
         </Button>
 
         <IconButton onClick={(e) => setAnchorEl(e.currentTarget)} sx={{ display: { xs: 'flex', md: 'none' }, color: '#FFFFFF' }}>

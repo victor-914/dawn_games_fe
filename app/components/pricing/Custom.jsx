@@ -18,7 +18,7 @@ export default function Custom() {
           <Typography sx={{ fontFamily: 'Inter', fontSize: { xs: 16, md: 20 }, color: '#FFFFFF', maxWidth: 700, lineHeight: 1.5, mb: 4 }}>
             Every institution is unique. Let's discuss a pricing plan tailored to your specific needs.
           </Typography>
-          <Button endIcon={<ArrowForward sx={{ color: '#F400F0', width: 20, height: 20 }} />} sx={{
+          <Button href='/contact' endIcon={<ArrowForward sx={{ color: '#F400F0', width: 20, height: 20 }} />} sx={{
             bgcolor: '#FFFFFF', width: { xs: '100%', sm: 186.78 }, height: 56, borderRadius: '10px',
             color: '#F400F0', fontSize: 16, fontFamily: 'Inter', fontWeight: 400, textTransform: 'none',
             boxShadow: '0px 10px 30px rgba(0, 0, 0, 0.1)',

@@ -46,11 +46,11 @@ export default function Herosection() {
         </Typography>
 
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} mb={{ xs: 5, md: 8 }} width={{ xs: '100%', sm: 'auto' }}>
-          <Button endIcon={<ArrowForward />} sx={{
+          <Button href='/contact' endIcon={<ArrowForward />} sx={{
             background: 'linear-gradient(180deg, #FF6B35 0%, #FF8C5A 100%)',
             width: { xs: '100%', sm: 208 }, height: 56, borderRadius: '10px', color: '#fff', textTransform: 'none'
           }}>
-            Request a Demo
+            Contact Sales
           </Button>
           <Button startIcon={<PlayArrow />} sx={{
             bgcolor: 'rgba(255, 255, 255, 0.1)', border: '1px solid rgba(255, 255, 255, 0.2)',

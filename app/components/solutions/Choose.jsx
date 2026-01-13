@@ -1,48 +1,37 @@
 'use client'
 import { Box, Container, Typography } from '@mui/material'
-import { TrackChanges, TrendingUp, WorkspacePremium } from '@mui/icons-material'
+import { Psychology, Language, Bolt, Shield, Rocket, People } from '@mui/icons-material'
 
 const reasons = [
-  { title: 'Purpose-Built for Africa', description: 'Every feature designed with African sports ecosystem in mind. No generic solutions.', icon: <TrackChanges sx={{ fontSize: 40, color: '#FFFFFF' }} />, iconBg: 'linear-gradient(180deg, #FF6B35 0%, #FF8C5A 100%)' },
-  { title: 'Scales With You', description: 'From 50 athletes to 5,000. One facility to fifty. We grow as you grow.', icon: <TrendingUp sx={{ fontSize: 40, color: '#FFFFFF' }} />, iconBg: 'linear-gradient(180deg, #FF6B35 0%, #FF8C5A 100%)' },
-  { title: 'Enterprise Grade', description: 'World-class technology backed by Cognix Group. Reliable, secure, and powerful.', icon: <WorkspacePremium sx={{ fontSize: 40, color: '#FFFFFF' }} />, iconBg: 'linear-gradient(180deg, #FF6B35 0%, #FF8C5A 100%)' }
+  { t: 'AI-Powered', d: 'Advanced machine learning for video analysis, performance prediction, and player development', i: <Psychology sx={{ fontSize: 32 }} />, c: '#00D3F2' },
+  { t: 'Africa-Focused', d: 'Designed for local payment methods, languages, and market conditions', i: <Language sx={{ fontSize: 32 }} />, c: '#C27AFF' },
+  { t: 'All-in-One Platform', d: 'Sports, esports, and game development in a single integrated ecosystem', i: <Bolt sx={{ fontSize: 32 }} />, c: '#FB64B6' },
+  { t: 'Enterprise-Grade', d: '99.9% uptime SLA, advanced security, and 24/7 support for premium plans', i: <Shield sx={{ fontSize: 32 }} />, c: '#00D3F2' },
+  { t: 'Rapid Deployment', d: 'Fully operational in 7-14 days with complete data migration and training', i: <Rocket sx={{ fontSize: 32 }} />, c: '#C27AFF' },
+  { t: 'Dedicated Support', d: 'Local team in Nigeria with in-person training and on-site event support', i: <People sx={{ fontSize: 32 }} />, c: '#FB64B6' }
 ]
 
-export default function Choose() {
+export default function WhyDawnGames() {
   return (
-    <Box sx={{ background: 'linear-gradient(180deg, #1A2744 0%, #0A1628 100%)', py: { xs: 8, md: 15 } }}>
+    <Box sx={{width: '100%', bgcolor: '#0a1628', py: { xs: 8} }}>
       <Container maxWidth="lg">
         <Box sx={{ textAlign: 'center', mb: { xs: 6, md: 8 } }}>
-          <Typography variant="h2" sx={{ fontFamily: 'Inter', fontWeight: 'bold', fontSize: { xs: 32, md: 48 }, color: '#FFFFFF', mb: 2 }}>
-            Why Choose Dawn Games?
+          <Typography sx={{ fontFamily: 'Inter', fontWeight: 700, fontSize: { xs: 28, md: 36 }, background: 'linear-gradient(90deg, #00D3F2 0%, #FB64B6 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', mb: 2 }}>
+            WHY DAWN GAMES?
           </Typography>
-          <Typography sx={{ fontFamily: 'Inter', fontSize: { xs: 16, md: 20 }, color: '#D1D5DC', maxWidth: 800, mx: 'auto' }}>
-            We're not just a software provider—we're your partner in excellence.
+          <Typography sx={{ fontFamily: 'Inter', fontSize: { xs: 16, md: 18 }, color: '#99A1AF', maxWidth: 700, mx: 'auto' }}>
+            Built specifically for African markets with world-class technology
           </Typography>
         </Box>
 
-        <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 4 }}>
-          {reasons.map((item, index) => (
-            <Box key={index} sx={{
-              width: { xs: '100%', md: 335.6 }, height: { xs: 'auto', md: 335.6 },
-              background: 'linear-gradient(180deg, #1A2744 0%, #050B14 100%)',
-              borderRadius: '16px', border: '0.8px solid rgba(255, 107, 53, 0.2)', p: 4,
-              display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center',
-              transition: 'transform 0.2s', '&:hover': { transform: 'translateY(-5px)', borderColor: 'rgba(255, 107, 53, 0.5)' }
-            }}>
-              <Box sx={{
-                width: 80, height: 80, borderRadius: '16px', background: item.iconBg,
-                display: 'flex', alignItems: 'center', justifyContent: 'center', mb: 4,
-                boxShadow: '0 4px 20px rgba(255, 107, 53, 0.3)'
-              }}>
-                {item.icon}
+        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' }, gap: 3 }}>
+          {reasons.map((r, i) => (
+            <Box key={i} sx={{ border: `0.8px solid ${r.c}4D`, borderRadius: '14px', p: 3, transition: 'all 0.3s', '&:hover': { transform: 'translateY(-4px)', boxShadow: `0 8px 24px ${r.c}4D` } }}>
+              <Box sx={{ width: 56, height: 56, borderRadius: '14px', bgcolor: `${r.c}33`, display: 'flex', alignItems: 'center', justifyContent: 'center', mb: 2.5, color: r.c }}>
+                {r.i}
               </Box>
-              <Typography variant="h3" sx={{ fontFamily: 'Inter', fontWeight: 600, fontSize: { xs: 24, md: 24 }, color: '#FFFFFF', mb: 2 }}>
-                {item.title}
-              </Typography>
-              <Typography sx={{ fontFamily: 'Inter', fontSize: 16, color: '#D1D5DC', lineHeight: 1.6 }}>
-                {item.description}
-              </Typography>
+              <Typography sx={{ fontFamily: 'Inter', fontWeight: 700, fontSize: 20, color: '#fff', mb: 1.5 }}>{r.t}</Typography>
+              <Typography sx={{ fontFamily: 'Inter', fontSize: 14, color: '#99A1AF', lineHeight: 1.5 }}>{r.d}</Typography>
             </Box>
           ))}
         </Box>

@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link'
 import { Box, Container, Typography, Stack, InputBase, Button } from '@mui/material'
 import Image from 'next/image'
 import { EmailOutlined, PhoneOutlined, LocationOnOutlined, Twitter, LinkedIn, Facebook, Instagram, YouTube } from '@mui/icons-material'
@@ -6,8 +7,7 @@ import { EmailOutlined, PhoneOutlined, LocationOnOutlined, Twitter, LinkedIn, Fa
 const footerSections = [
   { title: 'Product', links: ['Sports Club Management', 'E-Sports Platform', 'Game Development', 'Pricing'] },
   { title: 'Company', links: ['About Us', 'Blog', 'Contact', 'FAQ'] },
-  { title: 'Resources', links: ['Help Center', 'Documentation', 'Case Studies', 'API Reference'] },
-  { title: 'Legal', links: ['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'Data Security'] }
+  { title: 'Legal', links: ['Privacy Policy', 'Terms of Service'] }
 ]
 const socialIcons = [Twitter, LinkedIn, Facebook, Instagram, YouTube]
 
@@ -22,8 +22,8 @@ export default function Footer() {
             </Box>
             <Stack spacing={2} sx={{ color: '#99A1AF' }}>
               <Typography sx={{ fontFamily: 'Inter', fontSize: { xs: 16, md: 13, lg: 16 }, lineHeight: 1.6 }}>Powering excellence in African sports through world-class technology. Part of Cognix Group.</Typography>
-              <Stack direction="row" spacing={1.5} alignItems="center"><EmailOutlined sx={{ fontSize: { md: 18, lg: 20 } }} /><Typography sx={{ fontFamily: 'Inter', fontSize: { xs: 16, md: 13, lg: 16 } }}>info@dawngames.ng</Typography></Stack>
-              <Stack direction="row" spacing={1.5} alignItems="center"><PhoneOutlined sx={{ fontSize: { md: 18, lg: 20 } }} /><Typography sx={{ fontFamily: 'Inter', fontSize: { xs: 16, md: 13, lg: 16 } }}>+234 XXX XXX XXXX</Typography></Stack>
+              <Stack direction="row" spacing={1.5} alignItems="center"><EmailOutlined sx={{ fontSize: { md: 18, lg: 20 } }} /><Typography sx={{ fontFamily: 'Inter', fontSize: { xs: 16, md: 13, lg: 16 } }}>info@cognixtech.org</Typography></Stack>
+              <Stack direction="row" spacing={1.5} alignItems="center"><PhoneOutlined sx={{ fontSize: { md: 18, lg: 20 } }} /><Typography sx={{ fontFamily: 'Inter', fontSize: { xs: 16, md: 13, lg: 16 } }}>+234 708 311 4936</Typography></Stack>
               <Stack direction="row" spacing={1.5} alignItems="start"><LocationOnOutlined sx={{ fontSize: { md: 18, lg: 20 }, mt: 0.5 }} /><Typography sx={{ fontFamily: 'Inter', fontSize: { xs: 16, md: 13, lg: 16 } }}>Port Harcourt, Rivers State, Nigeria</Typography></Stack>
             </Stack>
           </Box>
@@ -32,9 +32,15 @@ export default function Footer() {
               <Box key={title} sx={{ minWidth: { xs: '45%', md: 'auto' } }}>
                 <Typography variant="h5" sx={{ fontFamily: 'Inter', fontWeight: 600, fontSize: { xs: 18, md: 16, lg: 20 }, color: '#FFFFFF', mb: 3 }}>{title}</Typography>
                 <Stack spacing={1.5}>
-                  {links.map(link => (
-                    <Typography key={link} sx={{ fontFamily: 'Inter', fontSize: { xs: 15, md: 13, lg: 16 }, color: '#99A1AF', cursor: 'pointer', whiteSpace: 'nowrap', '&:hover': { color: '#FF6B35' } }}>{link}</Typography>
-                  ))}
+                  {links.map(link => {
+                    const href = title === 'Product' ? (link === 'Pricing' ? '/pricing' : '/solutions') : 
+                                 title === 'Legal' ? (link === 'Privacy Policy' ? '/legal/dawngames-privacy' : '/legal/dawngames-terms') : '#'
+                    return (
+                      <Typography key={link} component={Link} href={href} sx={{ fontFamily: 'Inter', fontSize: { xs: 15, md: 13, lg: 16 }, color: '#99A1AF', cursor: 'pointer', whiteSpace: 'nowrap', textDecoration: 'none', '&:hover': { color: '#FF6B35' } }}>
+                        {link}
+                      </Typography>
+                    )
+                  })}
                 </Stack>
               </Box>
             ))}

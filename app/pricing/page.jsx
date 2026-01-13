@@ -1,17 +1,17 @@
 import React from 'react'
 import HeroSection from '../components/pricing/HeroSection'
-import Platform from '../components/pricing/Platform'
-import Revenue from '../components/pricing/Revenue'
 import Add from '../components/pricing/Add'
 import Custom from '../components/pricing/Custom'
+import Ecosystem from '../components/pricing/Ecosystem'
+import Ready from '../components/pricing/Ready'
 
 const Pricing = () => {
   return (
     <main>
         <HeroSection />
-        <Platform />
-        <Revenue />
+        <Ecosystem />
         <Add />
+        <Ready />
         <Custom />
     </main>
   )

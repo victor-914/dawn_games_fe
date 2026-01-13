@@ -25,9 +25,11 @@ export default function Join() {
               color: '#3586FF', fontSize: 16, textTransform: 'none', fontFamily: 'Inter',
               '&:hover': { bgcolor: 'rgba(255, 255, 255, 0.9)' }
             }}>
-              Schedule a Demo
+              Watch Platform Tour
             </Button>
-            <Button sx={{
+            <Button
+             href='/contact'
+             sx={{
               bgcolor: 'rgba(255, 255, 255, 0.2)', border: '1.6px solid #FFFFFF',
               width: { xs: '100%', sm: 161.98 }, height: 59.2, borderRadius: '10px',
               color: '#FFFFFF', fontSize: 16, textTransform: 'none', fontFamily: 'Inter',
