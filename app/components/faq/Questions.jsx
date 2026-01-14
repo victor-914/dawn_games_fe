@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { Box, Container, Typography, InputBase, Button, Stack, Collapse, IconButton } from '@mui/material'
 import { Search, KeyboardArrowDown, KeyboardArrowUp, Lightbulb, AttachMoney, Public, SportsEsports, RocketLaunch } from '@mui/icons-material'
+import { useFaq } from '@/app/hooks/useFaq'
 
 const filters = [
   { label: 'All Questions', icon: null },
@@ -12,13 +13,19 @@ const filters = [
   { label: 'Game Development', icon: <RocketLaunch sx={{ width: 20, height: 20 }} /> },
 ]
 
-const questions = [
-  "How is Dawn Games different from other sports management software?", "Is Dawn Games part of Cognix Group?", "Are there setup fees?", "Can I cancel anytime?", "Do you offer discounts?", "What happens if I exceed my athlete limit?", "Can I customize the platform to match my brand?", "Can parents and athletes access the system?", "How does tournament management work?", "Can I sell merchandise or tickets through the platform?", "Do you support multi-location organizations?", "What games does your e-sports platform support?", "Can we stream tournaments through your platform?", "How does player ranking work?", "Can we host online and offline tournaments?", "Do I need to be a developer to publish games?", "What's the revenue split for published games?", "How do you help with game marketing?", "What platforms can I publish to?"
-]
-
 export default function Questions() {
+  const { data } = useFaq()
   const [activeFilter, setActiveFilter] = useState('All Questions')
+  const [search, setSearch] = useState('')
   const [expanded, setExpanded] = useState(null)
+
+  const faqs = data?.data || []
+  
+  const filteredFaqs = faqs.filter(faq => {
+    const matchesFilter = activeFilter === 'All Questions' || faq.category === activeFilter
+    const matchesSearch = faq.question.toLowerCase().includes(search.toLowerCase())
+    return matchesFilter && matchesSearch
+  })
 
   return (
     <Box sx={{ bgcolor: '#050B14' }}>
@@ -28,7 +35,12 @@ export default function Questions() {
           borderRadius: '16.4px', display: 'flex', alignItems: 'center', px: 3, mt: 5, mb: 5
         }}>
           <Search sx={{ color: '#99A1AF', width: 24, height: 24, mr: 2 }} />
-          <InputBase placeholder="Search for answers..." sx={{ flex: 1, fontFamily: 'Inter', fontSize: 18, color: '#FFFFFF', '& ::placeholder': { color: '#6A7282', opacity: 1 } }} />
+          <InputBase 
+            placeholder="Search for answers..." 
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            sx={{ flex: 1, fontFamily: 'Inter', fontSize: 18, color: '#FFFFFF', '& ::placeholder': { color: '#6A7282', opacity: 1 } }} 
+          />
         </Box>
 
         <Box sx={{ width: '100%', overflowX: 'auto', '&::-webkit-scrollbar': { display: 'none' }, scrollbarWidth: 'none' }}>
@@ -52,14 +64,14 @@ export default function Questions() {
         backgroundSize: 'cover', backgroundPosition: 'top center', pt: 5, pb: 10
       }}>
         <Container maxWidth="lg" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
-          {questions.map((question, index) => (
-            <Box key={index} onClick={() => setExpanded(expanded === index ? null : index)} sx={{
+          {filteredFaqs.map((faq, index) => (
+            <Box key={faq.id} onClick={() => setExpanded(expanded === index ? null : index)} sx={{
               width: { xs: '100%', md: 832 }, minHeight: 77.6, background: 'linear-gradient(180deg, #1A2744 0%, #050B14 100%)',
               borderRadius: '16px', border: '0.8px solid rgba(255, 107, 53, 0.2)', overflow: 'hidden', cursor: 'pointer',
               transition: 'all 0.3s ease', '&:hover': { borderColor: 'rgba(255, 107, 53, 0.5)' }
             }}>
               <Box sx={{ minHeight: 77.6, px: 4, py: 2, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <Typography sx={{ fontFamily: 'Inter', fontSize: { xs: 16, md: 18 }, color: '#FFFFFF' }}>{question}</Typography>
+                <Typography sx={{ fontFamily: 'Inter', fontSize: { xs: 16, md: 18 }, color: '#FFFFFF' }}>{faq.question}</Typography>
                 <IconButton sx={{ color: '#FF6B35' }}>
                   {expanded === index ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
                 </IconButton>
@@ -67,7 +79,7 @@ export default function Questions() {
               <Collapse in={expanded === index}>
                 <Box sx={{ px: 4, pb: 4 }}>
                   <Typography sx={{ fontFamily: 'Inter', fontSize: 16, color: '#D1D5DC', lineHeight: 1.6 }}>
-                    Dawn Games offers an all-in-one solution that integrates player development, facility management, and fan engagement tools specifically tailored for the African market.
+                    {faq.answer}
                   </Typography>
                 </Box>
               </Collapse>
