@@ -20,7 +20,7 @@ export default function EcosystemPage() {
           <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} justifyContent="center" alignItems="center" flexWrap="wrap">
             {Object.keys(categories).map((key) => (
               <Box key={key} onClick={() => setActiveTab(key)} sx={{ display: 'inline-flex', alignItems: 'center', gap: 1, background: activeTab === key ? `linear-gradient(135deg, ${themeColors[key].main} 0%, ${themeColors[key].dark} 100%)` : `${themeColors[key].bg}`, border: activeTab === key ? 'none' : `1px solid ${themeColors[key].border}`, borderRadius: '10px', px: { xs: 2, sm: 3 }, py: 1.5, color: activeTab === key ? '#FFFFFF' : themeColors[key].main, fontSize: { xs: 12, sm: 14 }, fontFamily: 'Inter', fontWeight: 600, cursor: 'pointer', boxShadow: activeTab === key ? `0 4px 20px ${themeColors[key].main}66` : 'none', transition: 'all 0.3s' }}>
-                {key === 'sports' ? '🏆' : key === 'esports' ? '🎮' : '⚡'}
+                {key === 'sports' ? '🏆 ' : key === 'esports' ? '🎮 ' : '⚡ '}
                 {categories[key].title}
               </Box>
             ))}
