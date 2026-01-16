@@ -16,7 +16,7 @@ const sections = [
       { icon: <Psychology sx={{ fontSize: 18, color: '#00D3F2' }} />, label: 'Cognitive Enhancement', desc: 'AI-powered cognitive training for reaction time, decision-making, and pattern recognition' },
       { icon: <BarChart sx={{ fontSize: 18, color: '#00D3F2' }} />, label: 'Performance Analytics', desc: 'Track physical metrics, predict player development, optimize training loads' }
     ],
-    img: 'https://ik.imagekit.io/4bvbtnlkl/Container.png'
+    img: '/box.png'
   },
   {
     title: 'ESPORTS',
@@ -31,7 +31,7 @@ const sections = [
       { icon: <BarChart sx={{ fontSize: 18, color: '#C27AFF' }} />, label: 'Performance Analytics', desc: 'Track win rates, ELO rankings, KDA stats, and AI-powered player scouting' },
       { icon: <Videocam sx={{ fontSize: 18, color: '#C27AFF' }} />, label: 'Professional Broadcasting', desc: 'Multi-platform streaming with custom overlays, replay generation, and sponsor integration' }
     ],
-    img: 'https://ik.imagekit.io/4bvbtnlkl/Container%20(5).png'
+    img: '/box2.png'
   },
   {
     title: 'GAME DEVELOPMENT',
@@ -46,7 +46,7 @@ const sections = [
       { icon: <Workspaces sx={{ fontSize: 18, color: '#FB64B6' }} />, label: 'Publishing Support', desc: 'ASO services, localization, influencer campaigns, and publisher introductions' },
       { icon: <Language sx={{ fontSize: 18, color: '#FB64B6' }} />, label: 'Strategic Partnerships', desc: 'Direct partnerships with major studios, investment facilitation, and IP licensing' }
     ],
-    img: 'https://ik.imagekit.io/4bvbtnlkl/Container%20(6).png'
+    img: '/box3.png'
   }
 ]
 
