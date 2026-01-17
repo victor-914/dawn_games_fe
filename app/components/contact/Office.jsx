@@ -3,7 +3,7 @@ import { Box, Container, Typography } from '@mui/material'
 import { LocationOn } from '@mui/icons-material'
 
 const offices = [
-  { title: 'Nigeria Headquarters', location: 'Port Harcourt, Rivers State', status: 'Open Now', statusColor: '#00C950' },
+  { title: 'Nigeria Headquarters', location: 'Enugu, Enugu State', status: 'Open Now', statusColor: '#00C950' },
   { title: 'Kenya Office', location: 'Nairobi', status: 'Opening Soon', statusColor: '#FF6B35' },
   { title: 'Ghana Office', location: 'Accra', status: 'Opening Soon', statusColor: '#FF6B35' }
 ]

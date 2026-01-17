@@ -2,7 +2,6 @@ import React from 'react'
 import HeroSection from '../components/contact/HeroSection'
 import Form from '../components/contact/Form'
 import Office from '../components/contact/Office'
-import Customer from '../components/contact/Customer'
 
 const Contact = () => {
   return (
@@ -10,7 +9,6 @@ const Contact = () => {
         <HeroSection />
         <Form />
         <Office />
-        <Customer />
     </main>
   )
 }

@@ -24,7 +24,7 @@ export default function Footer() {
               <Typography sx={{ fontFamily: 'Inter', fontSize: { xs: 16, md: 13, lg: 16 }, lineHeight: 1.6 }}>Powering excellence in African sports through world-class technology. Part of Cognix Group.</Typography>
               <Stack direction="row" spacing={1.5} alignItems="center"><EmailOutlined sx={{ fontSize: { md: 18, lg: 20 } }} /><Typography sx={{ fontFamily: 'Inter', fontSize: { xs: 16, md: 13, lg: 16 } }}>info@cognixtech.org</Typography></Stack>
               <Stack direction="row" spacing={1.5} alignItems="center"><PhoneOutlined sx={{ fontSize: { md: 18, lg: 20 } }} /><Typography sx={{ fontFamily: 'Inter', fontSize: { xs: 16, md: 13, lg: 16 } }}>+234 708 311 4936</Typography></Stack>
-              <Stack direction="row" spacing={1.5} alignItems="start"><LocationOnOutlined sx={{ fontSize: { md: 18, lg: 20 }, mt: 0.5 }} /><Typography sx={{ fontFamily: 'Inter', fontSize: { xs: 16, md: 13, lg: 16 } }}>Port Harcourt, Rivers State, Nigeria</Typography></Stack>
+              <Stack direction="row" spacing={1.5} alignItems="start"><LocationOnOutlined sx={{ fontSize: { md: 18, lg: 20 }, mt: 0.5 }} /><Typography sx={{ fontFamily: 'Inter', fontSize: { xs: 16, md: 13, lg: 16 } }}>Enugu, Enugu State, Nigeria</Typography></Stack>
             </Stack>
           </Box>
           <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', flex: 1, gap: 4 }}>
@@ -34,6 +34,7 @@ export default function Footer() {
                 <Stack spacing={1.5}>
                   {links.map(link => {
                     const href = title === 'Product' ? (link === 'Pricing' ? '/pricing' : '/solutions') : 
+                                 title === 'Company' ? (link === 'About Us' ? '/about' : link === 'Blog' ? '/blog' : link === 'Contact' ? '/contact' : '/faq') :
                                  title === 'Legal' ? (link === 'Privacy Policy' ? '/legal/dawngames-privacy' : '/legal/dawngames-terms') : '#'
                     return (
                       <Typography key={link} component={Link} href={href} sx={{ fontFamily: 'Inter', fontSize: { xs: 15, md: 13, lg: 16 }, color: '#99A1AF', cursor: 'pointer', whiteSpace: 'nowrap', textDecoration: 'none', '&:hover': { color: '#FF6B35' } }}>

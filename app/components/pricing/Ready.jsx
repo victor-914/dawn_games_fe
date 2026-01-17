@@ -19,7 +19,7 @@ export default function Ready() {
         </Typography>
 
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} justifyContent="center" alignItems="center">
-          <Button sx={{ 
+          <Button href='https://www.calendly.com/cognix' target="_blank" sx={{ 
             background: 'linear-gradient(90deg, #00B8DB 0%, #AD46FF 100%)', 
             borderRadius: '8px', color: '#FFF', px: 4, py: 1.5, 
             fontFamily: 'Inter', fontWeight: 700, fontSize: 14, 
@@ -29,7 +29,7 @@ export default function Ready() {
             SCHEDULE DEMO
           </Button>
           
-          <Button variant="outlined" sx={{ 
+          <Button href='/contact' variant="outlined" sx={{ 
             borderColor: '#00B8DB', color: '#00B8DB', borderRadius: '8px', px: 4, py: 1.5, 
             fontFamily: 'Inter', fontWeight: 700, fontSize: 14, borderWidth: '1.5px',
             '&:hover': { borderColor: '#00D3F2', bgcolor: 'rgba(0, 184, 219, 0.1)', borderWidth: '1.5px' } 
@@ -37,7 +37,7 @@ export default function Ready() {
             TALK TO SALES
           </Button>
 
-          <Button variant="outlined" sx={{ 
+          <Button href='/faq' variant="outlined" sx={{ 
             borderColor: '#AD46FF', color: '#AD46FF', borderRadius: '8px', px: 4, py: 1.5, 
             fontFamily: 'Inter', fontWeight: 700, fontSize: 14, borderWidth: '1.5px',
             '&:hover': { borderColor: '#C27AFF', bgcolor: 'rgba(173, 70, 255, 0.1)', borderWidth: '1.5px' } 

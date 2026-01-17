@@ -2,7 +2,7 @@
 import { Box, Container, Typography, Stack, Avatar } from '@mui/material'
 
 const testimonials = [
-  { quote: "Dawn Games transformed our academy from a manual operation to a modern sports institution. We've doubled our capacity while cutting administrative time by 70%.", name: 'Coach Felix', title: 'Academy Director', avatar: '/avatar1.png' },
+  { quote: "Dawn Games has been able to manage the technological operations of our club efficiently, doubling our capacity and cutting down administrative time, I highly recommend them.", name: 'Amobi Ezeaku, ESQ', title: 'Rangers GM/CEO', avatar: '/avatar1.png' },
   { quote: "Finally, an e-sports platform built for Africa. Tournament organization that used to take weeks now takes hours.", name: 'Ede Tochukwu', title: 'Syntax Lab Director', avatar: '/avatar2.png' }
 ]
 

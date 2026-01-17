@@ -13,10 +13,7 @@ export default function Ready() {
             See Dawn Games in action with a personalized demo customized to your needs
           </Typography>
           <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} justifyContent="center" alignItems="center">
-            <Button sx={{ background: 'linear-gradient(135deg, #00B8DB 0%, #AD46FF 100%)', borderRadius: '10px', width: { xs: '100%', sm: 'auto' }, px: 4, py: 1.5, fontFamily: 'Inter', fontWeight: 700, fontSize: 18, color: '#FFFFFF', textTransform: 'none', '&:hover': { background: 'linear-gradient(135deg, #00A5C7 0%, #9B3DE6 100%)' } }}>
-              Schedule 30-Minute Demo
-            </Button>
-            <Button sx={{ border: '1.6px solid #00B8DB', borderRadius: '10px', width: { xs: '100%', sm: 'auto' }, px: 4, py: 1.5, fontFamily: 'Inter', fontWeight: 700, fontSize: 18, color: '#00D3F2', textTransform: 'none', bgcolor: 'transparent', '&:hover': { bgcolor: 'rgba(0, 184, 219, 0.1)', border: '1.6px solid #00B8DB' } }}>
+            <Button href="/pricing" sx={{ border: '1.6px solid #00B8DB', borderRadius: '10px', width: { xs: '100%', sm: 'auto' }, px: 4, py: 1.5, fontFamily: 'Inter', fontWeight: 700, fontSize: 18, color: '#00D3F2', textTransform: 'none', bgcolor: 'transparent', '&:hover': { bgcolor: 'rgba(0, 184, 219, 0.1)', border: '1.6px solid #00B8DB' } }}>
               View Pricing Plans
             </Button>
           </Stack>

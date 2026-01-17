@@ -1,5 +1,5 @@
 'use client'
-import { Box, Container, Typography, InputBase, Button } from '@mui/material'
+import { Box, Container, Typography, InputBase, Button, Select, MenuItem } from '@mui/material'
 import { Send } from '@mui/icons-material'
 
 const Label = ({ children }) => <Typography sx={{ fontFamily: 'Inter', fontSize: 16, color: '#FFFFFF', mb: 1 }}>{children}</Typography>
@@ -38,7 +38,22 @@ export default function Form() {
             <Box sx={{ flex: 1 }}><Label>Phone Number</Label><Input placeholder="+234 708 311 4936" /></Box>
             <Box sx={{ flex: 1 }}><Label>Organization</Label><Input placeholder="Your Academy/Club Name" /></Box>
           </Box>
-          <Box><Label>I'm interested in *</Label><Input placeholder="" /></Box>
+          <Box>
+            <Label>I'm interested in *</Label>
+            <Select defaultValue="" displayEmpty sx={{
+              width: '100%', height: 49.6, bgcolor: '#0A1628', border: '0.8px solid #364153', borderRadius: '10px',
+              color: '#FFFFFF', fontFamily: 'Inter', fontSize: 16,
+              '& .MuiOutlinedInput-notchedOutline': { border: 'none' },
+              '&:hover .MuiOutlinedInput-notchedOutline': { border: 'none' },
+              '&.Mui-focused .MuiOutlinedInput-notchedOutline': { border: 'none' },
+              '& .MuiSelect-icon': { color: '#6A7282' }
+            }}>
+              <MenuItem value="" disabled sx={{ color: '#6A7282' }}>Select an option</MenuItem>
+              <MenuItem value="sports">Sports Club Management</MenuItem>
+              <MenuItem value="esports">E-Sports Platform</MenuItem>
+              <MenuItem value="gamedev">Game Development/Publishing</MenuItem>
+            </Select>
+          </Box>
           <Box><Label>Message *</Label><Input multiline minRows={6} placeholder="Tell us about your institution and how we can help..." /></Box>
 
           <Button endIcon={<Send sx={{ width: 20, height: 20 }} />} sx={{

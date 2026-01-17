@@ -80,13 +80,6 @@ export default function Needs() {
                   </Box>
                   <Typography variant="h4" fontWeight="bold" color="white" gutterBottom sx={{ fontSize: { xs: 24, md: 30 } }}>{card.title}</Typography>
                   <Typography variant="body1" color="#D1D5DC" paragraph sx={{ fontSize: 16 }}>{card.subtitle}</Typography>
-                  <Button endIcon={<ArrowForward />} variant="contained" sx={{
-                    bgcolor: card.buttonColor, borderRadius: '10px', width: 155, height: 48,
-                    textTransform: 'none', fontSize: 16, boxShadow: `0 4px 20px ${card.buttonColor}40`,
-                    '&:hover': { bgcolor: card.buttonColor, filter: 'brightness(1.1)' }
-                  }}>
-                    Learn More
-                  </Button>
                 </Box>
 
                 <Box sx={{ width: { xs: '100%', md: '50%' } }}>

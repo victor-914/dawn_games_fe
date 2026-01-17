@@ -9,7 +9,6 @@ const sections = [
     desc: 'AI-powered sports management platform with performance analytics, video analysis, and cognitive training for athletes.',
     color: '#00D3F2',
     icon: <EmojiEvents sx={{ fontSize: 28, color: '#00D3F2' }} />,
-    btn: 'Explore Sports Solutions',
     features: [
       { icon: <Person sx={{ fontSize: 18, color: '#00D3F2' }} />, label: 'Complete Athlete Management', desc: 'Manage profiles, schedules, billing, and communication in one platform' },
       { icon: <Videocam sx={{ fontSize: 18, color: '#00D3F2' }} />, label: 'AI Video Analysis', desc: 'Computer vision for automatic player tracking, heat maps, and performance metrics' },
@@ -24,7 +23,6 @@ const sections = [
     desc: 'Complete tournament hosting and talent management platform with streaming integration, player analytics, and sponsorship tracking.',
     color: '#C27AFF',
     icon: <SportsEsports sx={{ fontSize: 28, color: '#C27AFF' }} />,
-    btn: 'Explore Esports Solutions',
     features: [
       { icon: <EmojiEvents sx={{ fontSize: 18, color: '#C27AFF' }} />, label: 'Tournament Management', desc: 'Host unlimited tournaments with advanced bracket formats and automated prize distribution' },
       { icon: <Diversity3 sx={{ fontSize: 18, color: '#C27AFF' }} />, label: 'Talent Management', desc: 'Manage players, contracts, sponsorships, and streaming revenue in one place' },
@@ -39,7 +37,6 @@ const sections = [
     desc: 'End-to-end game development infrastructure with African-focused assets, monetization tools, and publishing support.',
     color: '#FB64B6',
     icon: <Code sx={{ fontSize: 28, color: '#FB64B6' }} />,
-    btn: 'Explore Game Dev Solutions',
     features: [
       { icon: <Code sx={{ fontSize: 18, color: '#FB64B6' }} />, label: 'Development Tools', desc: 'Unity/Unreal templates, African asset library, backend infrastructure, and Git CD pipeline' },
       { icon: <AttachMoney sx={{ fontSize: 18, color: '#FB64B6' }} />, label: 'Monetization & Analytics', desc: 'Mobile money integration, AI pricing optimization, churn prediction, and LTV calculation' },
@@ -90,9 +87,6 @@ export default function HeroSection() {
                     </Stack>
                   ))}
                 </Stack>
-                <Button variant="contained" sx={{ bgcolor: s.color, color: '#ffffff', width: { xs: '100%', sm: 'fit-content' }, py: 1.75, px: 4.5, fontWeight: 700, fontSize: 16, fontFamily: "Inter", borderRadius: 2, textTransform: 'none', boxShadow: `0 4px 20px ${s.color}40`, '&:hover': { bgcolor: s.color, opacity: 0.9, boxShadow: `0 6px 25px ${s.color}60` } }}>
-                  {s.btn}
-                </Button>
               </Stack>
             </Box>
             <Box sx={{ flex: '0 0 auto', width: { xs: '100%', md: '48%' }, maxWidth: { md: 600 } }}>
