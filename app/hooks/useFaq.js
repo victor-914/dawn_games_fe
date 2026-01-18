@@ -7,7 +7,15 @@ export function useFaq() {
     queryKey: ['faqs'],
     queryFn: getFaqs,
     staleTime: 1000 * 60 * 5,
+    retry: false,
+    onError: (err) => {
+      console.log('FAQ fetch error:', err);
+    }
   });
 
-  return { data, isLoading, error };
+  return { 
+    data: data || { data: [] }, 
+    isLoading, 
+    error 
+  };
 }
