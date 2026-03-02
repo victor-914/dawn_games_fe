@@ -19,7 +19,9 @@ export default function Navbar() {
       <Toolbar sx={{ justifyContent: 'space-between', minHeight: 80, width: '100%', maxWidth: 1400, margin: '0 auto', px: { xs: 2, md: 4, lg: 0 } }}>
         
         <Box sx={{ width: { xs: 140, md: 180, lg: 260 }, flexShrink: 0 }}>
-          <Image src="/logo.png" width={260} height={62} alt="Logo" style={{ width: '100%', height: 'auto' }} />
+          <Link href="/" style={{ display: 'block' }}>
+            <Image src="/logo.png" width={260} height={62} alt="Logo" style={{ width: '100%', height: 'auto' }} />
+          </Link>
         </Box>
 
         <Stack direction="row" spacing={{ md: 0, lg: 0.5 }} sx={{ display: { xs: 'none', md: 'flex' }, flex: 1, justifyContent: 'center' }}>
